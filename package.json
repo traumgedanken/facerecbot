@@ -17,7 +17,7 @@
     "url": "https://github.com/traumgedanken/facerecbot/issues"
   },
   "homepage": "https://github.com/traumgedanken/facerecbot#readme",
-  "devDependencies": {
+  "dependencies": {
     "@google-cloud/vision": "^0.24.0",
     "cloudinary": "^1.13.2",
     "date-and-time": "^0.6.3",
