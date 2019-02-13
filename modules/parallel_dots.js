@@ -3,6 +3,16 @@ const {
     URLSearchParams
 } = require('url');
 
+const emotionsLocale = {
+    Neutral: 'Нейтральність',
+    Sad: 'Сум',
+    Fear: 'Страх',
+    Angry: 'Злість',
+    Surprise: 'Здивованість',
+    Happy: 'Щастя',
+    Disgust: 'Відраза'
+};
+
 module.exports = class {
     constructor(url) {
         this.url = url;
@@ -18,9 +28,9 @@ module.exports = class {
             });
             let result = '';
             const emotions = (await response.json()).facial_emotion;
-            if (!emotions || emotions.length == 0) return "No face detected";
+            if (!emotions || emotions.length == 0) return "На фото не видно лиця";
             emotions.forEach(emotion => {
-                result += `${emotion.tag}: ${Math.floor(emotion.score * 100)}%\n`;
+                result += `${emotionsLocale[emotion.tag]}: ${Math.floor(emotion.score * 100)}%\n`;
             });
             return result;
         };

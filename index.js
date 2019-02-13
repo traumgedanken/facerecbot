@@ -15,13 +15,14 @@ bot.on('photo', async (message) => {
 
         const cv = new CloudVision();
         await cv.init(url, message.from.username);
-        let result = await cv.getString();
+        const imageUrl = await cv.rewriteImage();
         await cv.close();
 
         const pd = new ParallelDots(url);
-        result = await pd.getString();
+        const result = await pd.getString();
+        await bot.sendPhoto(message.chat.id, imageUrl);
         await bot.sendMessage(message.chat.id, result);
     } catch (err) {
-        console.log(err.message);
+        await bot.sendMessage(message.chat.id, err.message);
     }
 });
