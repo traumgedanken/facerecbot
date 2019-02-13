@@ -1,0 +1,19 @@
+{
+  "name": "facerecbot",
+  "version": "1.0.0",
+  "description": "Telegram bot for recognizing emotions on photos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/traumgedanken/facerecbot.git"
+  },
+  "author": "Ihor Bulaevskyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/traumgedanken/facerecbot/issues"
+  },
+  "homepage": "https://github.com/traumgedanken/facerecbot#readme"
+}
