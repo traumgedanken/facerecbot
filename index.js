@@ -10,13 +10,12 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, {
 bot.on('photo', async (message) => {
     console.log(message.from.username);
     try {
-        await bot.sendChatAction(message.chat.id, 'typing');
+        await bot.sendChatAction(message.chat.id, "upload_photo");
         const url = await bot.getFileLink(message.photo[message.photo.length - 1].file_id);
 
         const cv = new CloudVision();
         await cv.init(url, message.from.username);
         const imageUrl = await cv.rewriteImage();
-        await cv.close();
 
         const pd = new ParallelDots(url);
         const result = await pd.getString();

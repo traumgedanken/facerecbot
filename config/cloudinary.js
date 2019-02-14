@@ -17,8 +17,10 @@ cloudinary.uploadFile = promisify((file, folder, type, callback) => {
                 public_id: file.name
             },
             (err, result) => {
-                if (err) callback(err);
-                else callback(null, result.url);
+                if (err) {
+                    console.log(err.message);
+                    callback(err);
+                } else callback(null, result.url);
             }
         )
         .end(file.data);
