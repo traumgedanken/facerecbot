@@ -2,16 +2,10 @@ const TelegramBot = require('node-telegram-bot-api');
 const CloudVision = require('./cloud_vision');
 const ParallelDots = require('./parallel_dots');
 
-let bot;
 const token = process.env.BOT_TOKEN;
-if (process.env.NODE_ENV === 'production') {
-    bot = new TelegramBot(token);
-    bot.setWebHook(process.env.HEROKU_URL + bot.token);
-} else {
-    bot = new TelegramBot(token, {
-        polling: true
-    });
-}
+const bot = new TelegramBot(token, {
+    polling: true
+});
 
 bot.on('photo', async (message) => {
     console.log('Message from:', message.from.username);
