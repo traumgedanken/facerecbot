@@ -25,5 +25,9 @@
     "download": "^7.1.0",
     "node-telegram-bot-api": "^0.30.0",
     "pureimage": "^0.1.6"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
   }
 }
