@@ -24,9 +24,7 @@
     "dotenv": "^6.2.0",
     "download": "^7.1.0",
     "node-telegram-bot-api": "^0.30.0",
-    "pureimage": "^0.1.6"
-  },
-  "devDependencies": {
+    "pureimage": "^0.1.6",
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
   }
