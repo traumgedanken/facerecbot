@@ -19,13 +19,13 @@
     "homepage": "https://github.com/traumgedanken/facerecbot#readme",
     "dependencies": {
         "@google-cloud/vision": "^0.24.0",
+        "body-parser": "^1.18.3",
         "cloudinary": "^1.13.2",
         "date-and-time": "^0.6.3",
         "dotenv": "^6.2.0",
         "download": "^7.1.0",
+        "express": "^4.16.4",
         "node-telegram-bot-api": "^0.30.0",
-        "pureimage": "^0.1.6",
-        "body-parser": "^1.18.3",
-        "express": "^4.16.4"
+        "pureimage": "^0.1.6"
     }
 }
