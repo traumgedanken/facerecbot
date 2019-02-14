@@ -6,12 +6,12 @@ module.exports = class {
     // create file from url
     constructor(url) {
         this.url = url;
-        this.name = date.format(new Date(), 'DD:MM:YYYY_HH:mm:ss') + path.extname(url);
+        this.name =
+            date.format(new Date(), 'DD:MM:YYYY_HH:mm:ss') + path.extname(url);
+    }
 
-        // load info to file object
-        this.init = async () => {
-            this.data = await download(this.url);
-        };
-
-    };
+    // load info to file object
+    async init() {
+        this.data = await download(this.url);
+    }
 };
